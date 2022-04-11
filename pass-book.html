@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>密码本 · 景</title>
+    <link rel="stylesheet" href="css/assets/css/font-awesome.css">
+    <link rel="stylesheet" href="css/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="css/assets/css/owl.theme.css">
+    <link rel="stylesheet" href="css/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/assets/css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-jing.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!--小屏幕导航按钮和logo-->
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">景</a>
+        </div>
+        <!--小屏幕导航按钮和logo-->
+        <!--导航-->
+        <div class="navbar-collapse collapse" id="myBar">
+            <ul class="nav navbar-nav navbar-right">
+                <li id="index-url"><a href="index.html">首页</a></li>
+                <li id="help-url"><a href="help.html">Help</a></li>
+                <li id="login-url"><a href="login.html">登录</a></li>
+                <!--                <li id="usercenter-url"><a href="usercenter.html"><span class="glyphicon glyphicon-user" id="navbar-userlogo"></span></a>--></li>
+            </ul>
+        </div>
+        <!--导航-->
+    </div>
+</nav>
+<div class="first-content">
+    <div class="pic index2-picture" style="background: url(css/assets/images/view.jpeg);">
+        <div class="overlay"></div>
+        <div class="content">
+            <h3>PASSWORD BOOK</h3>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="content">
+        <!--搜索输入框及查询、重置按钮-->
+        <div class="container content_width">
+            <div class="person_search">
+                <div class="search_input">
+                    <div class="input-group mb-3">
+                        <input id="Ktext" type="text" class="form-control" placeholder="请输入标识">
+                    </div>
+                </div>
+                <div class="search_input">
+                    <button class="btn btn-primary search_btn" type="button" id="search_btn">查询</button>
+                    <button class="btn btn-primary search_btn" type="button" id="back_btn">重置</button>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <!--添加按钮及bootstrap的模态框-->
+        <div class="export">
+            <button id="new_add" type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#renyuan">
+                <img src="images/add_two.png">
+                <span>添加</span>
+            </button>
+            <div class="modal fade" id="renyuan">
+                <div class="modal-dialog modal-lg modal_position">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">添加</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <table id="xztb" class="table">
+                                <!--新修改弹窗的样式-->
+                                <tbody>
+                                <tr>
+                                    <td class="tb_bg"><label for=""><font style="font-size: 14px; color: red;">*</font>标识</label>
+                                    </td>
+                                    <td><input class="userName" type="text" placeholder="请输入标识"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bg"><label for=""><font style="font-size: 14px; color: red;">*</font>描述（一）</label></td>
+                                    <td><input class="description" type="text" placeholder="请输入描述（一）"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bg"><label for=""><font style="font-size: 14px; color: red;">*</font>描述（二）</label></td>
+                                    <td><input class="description" type="text" placeholder="请输入描述（二）"></td>
+                                </tr>
+                                <tr>
+                                    <td class="tb_bg"><label for=""><font style="font-size: 14px; color: red;">*</font>添加日期</label></td>
+                                    <td><input class="date" type="date" placeholder="点击添加日期"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+                            <button id="add_btn" type="button" class="btn btn-secondary">确定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--表格列表-->
+        <table id="tb" class="table">
+            <thead>
+            <tr>
+                <th>标识</th>
+                <th>描述（一）</th>
+                <th>描述（二）</th>
+                <th>添加日期</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="show_tbody">
+            <tr>
+                <td>刘晓晓</td>
+                <td>7652101</td>
+                <td>7652101</td>
+                <td>高级</td>
+                <td>
+                    <a href="#" class="edit">编辑</a>
+                    <a href="#" class="del">删除</a>
+                </td>
+            </tr>
+            <tr>
+                <td>李磊</td>
+                <td>7652102</td>
+                <td>7652101</td>
+                <td>专家</td>
+                <td>
+                    <a href="#" class="edit">编辑</a>
+                    <a href="#" class="del">删除</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer>
+    <div class="main-footer">
+        <p> Copyright © 2020 By YORMNG</p>
+        <p>Made with Love from Us.</p>
+    </div>
+</footer>
+<script src="css/assets/js/jquery-2.1.4.js"></script>
+<script src="css/assets/js/bootstrap.min.js"></script>
+<script src="css/assets/js/jquery.slicknav.js"></script>
+<script src="css/assets/js/isotope.pkgd.min.js"></script>
+<script src="css/assets/js/owl.carousel.js"></script>
+<script src="css/assets/js/main.js"></script>
+<script src="js/bootbox.min.js"></script>
+<script src="js/mejs-pass-book.js"></script>
+</body>
+</html>
